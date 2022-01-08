@@ -104,9 +104,6 @@ app
 //   });
 // });
 
-how tf do I commit??
-I still didn't see my bew branch??
-why am I in the upstream repo? I forked it didn't I?? EH?
 
 
 
