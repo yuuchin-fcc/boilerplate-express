@@ -4,9 +4,6 @@
 // challenge #2
 var express = require('express');
 var bodyParser = require('body-parser'); // challenge #11
-app.use(bodyParser.urlencoded({ extended: false })); // challenge #11
-app.use(bodyParser.json());
-
 var app = express();
 
 // challenge #3
@@ -109,10 +106,20 @@ app
 // });
 
 
-// # challenge11: body-parser to Parse POST Requests
+// challenge #11: body-parser to Parse POST Requests
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
+// challenge #12
 
+app.post("/name", function(req, res) {
+  var firstName = req.body.first;
+  var lastName = req.body.last;
+  res.json({
+    name: firstName + ' ' + lastName
+  });
+});
 
 
 
