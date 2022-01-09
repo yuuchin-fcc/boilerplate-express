@@ -3,6 +3,10 @@
 
 // challenge #2
 var express = require('express');
+var bodyParser = require('body-parser'); // challenge #11
+app.use(bodyParser.urlencoded({ extended: false })); // challenge #11
+app.use(bodyParser.json());
+
 var app = express();
 
 // challenge #3
